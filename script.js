@@ -55,4 +55,6 @@ modeClockEle.addEventListener("click", (event) => {
   modeClockEle.classList.toggle("active");
 
   isConvertTo12Hour = !isConvertTo12Hour;
+
+  !isConvertTo12Hour ? $("#ampm").classList.add("hide-ele") : $("#ampm").classList.remove("hide-ele");
 });
