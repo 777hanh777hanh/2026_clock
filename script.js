@@ -35,7 +35,8 @@ intervalID = setInterval(() => {
   const ampm = hour >= 12 ? "PM" : "AM";
 
   if (isConvertTo12Hour) {
-    hour = hour - 12;
+    let hourTemp = hour - 12;
+    hour = hourTemp < 0 ? hour : hourTemp;
   }
 
   hourEle.innerHTML = hour.toString().padStart(2, "0");
